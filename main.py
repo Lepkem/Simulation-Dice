@@ -14,7 +14,6 @@ def simulation(func, wished_outcome, runs):
         i+=1
         if f == wished_outcome:
             counter += 1
-            
-    return(f'The program was run {runs} times and the amount of favorable outcomes was {wished_outcome}'), (f'\n This means that the chance for this even to happen, is P= {counter/runs}')
+    return(f'The program was run {runs} times and the amount of favorable outcomes was {counter}'), (f'\n This means that the chance for this even to happen, is P= {(float(counter)/float(runs))*1.00000}')
 
-print(simulation(throwdice(12), 7, 100))
+print(simulation(throwdice(), 7, 10000))
